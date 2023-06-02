@@ -1,0 +1,28 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = null;
+}
+
+<h1>@Model.Name</h1>
+<h2>@Model.Title</h2>
+
+@if(Model.Names != null && Model.Names.Any())
+{
+	<ul>
+		@foreach(var name in Model.Names)
+			{
+				<li>@name</li>
+			}
+	</ul>
+}
+
+@if(Model.HeaderImage != null)
+{
+	<img src="@Model.HeaderImage.Url()">
+}
+
+@if(Model.BodyText !=null) {
+	<p>@Model.BodyText</p>
+}
