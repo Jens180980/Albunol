@@ -5,24 +5,168 @@
 	Layout = null;
 }
 
-<h1>@Model.Name</h1>
-<h2>@Model.Title</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Albuñol</title>
+  </head>
+  <body>
+    <header>
+      <h2>Apartment for sale</h2>
+      <h1>Albuñol Living</h1>
+    </header>
 
-@if(Model.Names != null && Model.Names.Any())
-{
-	<ul>
-		@foreach(var name in Model.Names)
-			{
-				<li>@name</li>
-			}
-	</ul>
-}
+    <section class="hero">
+      <a href="#bottom" class="contact-btn btn">contact owner</a>
+    </section>
 
-@if(Model.HeaderImage != null)
-{
-	<img src="@Model.HeaderImage.Url()">
-}
+    <main>
+      <section class="info-outer">
+        <h3 class="header-left">Real Estate Information</h3>
+        <div class="info-inner">
+          <div class="info__facts-outer">
+            <h4>Facts</h4>
+            <div class="info__facts-inner">
+              <div>
+                <p>Area</p>
+                <p>Floors</p>
+                <p>Rooms</p>
+                <p>Baths</p>
+              </div>
+              <div>
+                <p>: 200 m2</p>
+                <p>: 3</p>
+                <p>: 5</p>
+                <p>: 2</p>
+              </div>
+            </div>
+            <button class="btn">Price: $150,000</button>
+          </div>
+          <div class="info__content-outer">
+            <h4>Description</h4>
+            <p>
+              Etiam id posuere dolor. Proin ornare enim id velit porta, a tempus
+              sapien vulputate. Vivamus sagittis, lorem vel mattis facilisis,
+              dolor ligula congue ante, id venenatis elit tortor ut ipsum.
+              Integer laoreet vehicula ipsum. Suspendisse ultricies lectus
+              sapien, sed ornare nisi volutpat.
+            </p>
+            <p>
+              Etiam id posuere dolor. Proin ornare enim id velit porta, a tempus
+              sapien vulputate. Vivamus sagittis, lorem vel mattis facilisis,
+              dolor ligula congue ante, id venenatis elit tortor ut ipsum.
+              Integer laoreet vehicula ipsum. Suspendisse ultricies lectus
+              sapien, sed ornare nisi volutpat.
+            </p>
+          </div>
+        </div>
+      </section>
 
-@if(Model.BodyText !=null) {
-	<p>@Model.BodyText</p>
-}
+      <section class="gallery-outer">
+        <h3>Photo Gallery</h3>
+        <div class="gallery-inner">
+          <div class="gallery-most-inner">
+            <svg id="re__prev"></svg>
+            <div class="re__gallery__img-container">
+              <img src="" alt="" id="re__img" />
+            </div>
+            <svg id="re__next"></svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="living-outer">
+        <div class="banner">
+          <h2>Living in Albuñol</h2>
+        </div>
+        <h3 class="header-left">Description</h3>
+        <div class="info-inner">
+          <div class="info__facts-outer">
+            <h4>Facts</h4>
+            <div class="info__facts-inner">
+              <div>
+                <p>Habitants</p>
+                <p>Founded in</p>
+                <p>Nearest beach</p>
+                <p>Alhambra</p>
+              </div>
+              <div>
+                <p>: 2000</p>
+                <p>: 1398</p>
+                <p>: 5 km</p>
+                <p>: 120 km</p>
+              </div>
+            </div>
+            <a href="#" class="btn">Read more</a>
+          </div>
+          <div class="info__content-outer">
+            <p>
+              Etiam id posuere dolor. Proin ornare enim id velit porta, a tempus
+              sapien vulputate. Vivamus sagittis, lorem vel mattis facilisis,
+              dolor ligula congue ante, id venenatis elit tortor ut ipsum.
+              Integer laoreet vehicula ipsum. Suspendisse ultricies lectus
+              sapien, sed ornare nisi volutpat.
+            </p>
+            <p>
+              Etiam id posuere dolor. Proin ornare enim id velit porta, a tempus
+              sapien vulputate. Vivamus sagittis, lorem vel mattis facilisis,
+              dolor ligula congue ante, id venenatis elit tortor ut ipsum.
+              Integer laoreet vehicula ipsum. Suspendisse ultricies lectus
+              sapien, sed ornare nisi volutpat.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-outer">
+        <h3>Photo Gallery</h3>
+        <div class="gallery-inner">
+          <div class="gallery__inner-left">
+            <svg id="city__prev"></svg>
+            <div class="gallery__img-container">
+              <img src="" alt="" id="city__img" />
+            </div>
+            <svg id="city__next"></svg>
+          </div>
+          <div class="gallery__inner-right"></div>
+        </div>
+      </section>
+
+      <section class="info-outer">
+        <h3 class="header-left">Links of interest</h3>
+        <div class="info-inner">
+          <img src="" alt="" class="www" />
+          <div class="info__facts-outer links">
+            <a href="#">www.somewhereinteresting.com</a>
+            <a href="#">www.havefuninvalencia.es</a>
+            <a href="#">www.alahambra.es</a>
+            <a href="#">www.rabita.es</a>
+            <a href="#" class="btn links__btn">See on map</a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-left">
+          <h3>Owner Contact Info</h3>
+          <div class="footer__info">
+            <img src="" alt="" />
+            <a href="mailto:bjarne.harder.larsen@gmail.com"
+              >bjarne.harder.larsen@gmail.com</a
+            >
+          </div>
+          <div class="footer__info">
+            <img src="" alt="" />
+            <a href="tel:+4588776655">+45 88 77 66 55</a>
+          </div>
+        </div>
+        <div class="footer-right" id="bottom">
+          <img src="" alt="" />
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
