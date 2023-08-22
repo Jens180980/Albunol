@@ -7,11 +7,15 @@
 
 
 @{
-    var heroImage = Umbraco.Media(Guid.Parse("839d3fcc-011c-4a7e-b04a-4a1b1eb413aa")) as Image;
+    var heroImage = Model.Value<IPublishedContent>("heroBGImage");
+    bool hasHeroImg = heroImage!=null;
+      @if(hasHeroImg) {
 
-    <section class="hero" style="background-image: url(@heroImage.Url())" >
+    <section class="hero" style="background-image: url(@heroImage.Url())"  >
         <a href="#bottom" class="contact-btn btn">@Model.Value("heroBtnTxt")</a>
     </section>
+
+      }
 }
 
     <main>
@@ -46,7 +50,7 @@
 
       <section class="living-outer">
         @{
-            var bannerImage = Umbraco.Media(Guid.Parse("bc7d2715-053a-41f9-bc28-c344df51fbc8")) as Image;
+            var bannerImage = Model.Value<IPublishedContent>("livingInBannerImg");
             <div class="banner" style="background-image: url(@bannerImage.Url())">
                 <h2>@Model.Value("livingInHeader")</h2>
             </div>
