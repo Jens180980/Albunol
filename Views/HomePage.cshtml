@@ -1,8 +1,10 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Models
 @{
 	Layout = "Master.cshtml";
+  
 }
 
 
@@ -69,8 +71,8 @@
               <div>
                 <p>: 2000</p>
                 <p>: 1398</p>
-                <p>: 5 km</p>
-                <p>: 120 km</p>
+                <p>: 5km</p>
+                <p>: 120km</p>
               </div>
             </div>
             <a href="#" class="btn">Read more</a>
@@ -83,15 +85,26 @@
         </div>
       </section>
 
-      <section class="info-outer">
+      <section class="info-outer seeing-andalucia">
+         @{
+            var bannerImage2 = Model.Value<IPublishedContent>("seeingAndaluciaBannerImg");
+            <div class="banner" style="background-image: url(@bannerImage2.Url())">
+                <h2 style="color: black;">@Model.Value("seeingAndaluciaHeader")</h2>
+            </div>
+        }
+
         <h3 class="header-left">Links of interest</h3>
         <div class="info-inner">
           <img src="" alt="" class="www" />
           <div class="info__facts-outer links">
-            <a href="#">www.somewhereinteresting.com</a>
-            <a href="#">www.havefuninvalencia.es</a>
-            <a href="#">www.alahambra.es</a>
-            <a href="#">www.rabita.es</a>
+            @{
+              var links = Model.Value<IEnumerable<Link>>("links");
+
+              foreach(var item in links ) {
+                <a href="@item.Url">@item.Name</a>
+              }
+            }
+
             <a href="#" class="btn links__btn">See on map --></a>
           </div>
         </div>

@@ -191,16 +191,20 @@ header h2 {
   margin-bottom: 40px;
 }
 
+.info__content-outer p {
+  margin-bottom: 20px;
+}
+
 /*
     Living in Albunol
 */
 
 .living-outer {
   background-color: var(--prim-color);
-  margin: 0 0 120px 0;
+  margin: 0 0 0 0;
 }
 
-.living-outer h3 {
+.living-outer h3, .seeing-andalucia h3 {
   margin-top: 60px;
 }
 
@@ -233,4 +237,45 @@ header h2 {
 }
 .links__btn {
   width:25% ;
+}
+
+/*
+    Seeing Andalucia
+*/
+
+.seeing-andalucia {
+  padding-top: 160px;
+}
+
+/*
+    Footer
+*/
+
+footer {
+  padding: 60px 20%;
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--txt-dark);
+}
+
+.footer-left {
+  padding-top: 60px;
+}
+
+.footer-right {
+  border-radius: 500px;
+  overflow: hidden;
+}
+
+.footer-right img {
+  width: 300px;
+}
+
+.footer__info {
+  margin-bottom: 20px;
 }
